@@ -8,4 +8,4 @@ class Olts(models.Module):
 	upswitch = models.CharField(max_length=50,unique=True,blank=True,null=True)
 	produce = models.CharField(max_length=20)
 	odf = models.CharField(max_length=100)
-	
+	upport = models.CharField(max_length=100)
