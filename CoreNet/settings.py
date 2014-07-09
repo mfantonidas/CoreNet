@@ -126,6 +126,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'testapp',
     'CoreNet',
+    'django-groundwork',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
