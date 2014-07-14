@@ -52,4 +52,5 @@ class fttx(models.Module)
     startnum = models.CharField(max_length=20,blank=True)
     endnum = models.CharField(max_length=20,blank=True)
 	console = models.CharField(max_length=50,blank=True)
+
   
