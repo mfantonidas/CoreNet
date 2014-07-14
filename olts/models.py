@@ -8,11 +8,6 @@ class Olts(models.Module):
 	upswitch = models.CharField(max_length=50,unique=True,blank=True,null=True)
 	type = models.CharField(max_length=20)
 	odf = models.CharField(max_length=100)
-<<<<<<< HEAD
-	upport = models.CharField(max_length=100)
-=======
-	upports = models.CharField(max_length=100)
-<<<<<<< HEAD
     area = models.CharField(max_length=50)
 	cvlanstart_bn = models.IntegerField()
 	cvlanend_bn = models.IntegerField()
@@ -57,7 +52,4 @@ class fttx(models.Module)
     startnum = models.CharField(max_length=20,blank=True)
     endnum = models.CharField(max_length=20,blank=True)
 	console = models.CharField(max_length=50,blank=True)
-    
-=======
->>>>>>> 799e7654dae0b8ca8a6b86676e02de228221414e
->>>>>>> e527b9dbdb813889d59d710892d4218088c651b8
+  
