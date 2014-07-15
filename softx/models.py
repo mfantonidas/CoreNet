@@ -10,4 +10,7 @@ class corenet_ne(models.Module):
 	uplink = models.CharField(max_length=50,blank=True)
 	
 class softxinfo(models.Module):
-    
+    area = models.CharField(max_length=20,unique=True)
+	
+class IMSinfo(models.Module):
+    area = models.CharField(max_length=20,unique=True)
