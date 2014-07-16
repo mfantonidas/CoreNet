@@ -7,9 +7,9 @@ class Olts(models.Module):
 	ip = models.IPAddressField(unique=True)
 	upswitch = models.CharField(max_length=50,unique=True,blank=True,null=True)
 	type = models.CharField(max_length=20)
-	odf = models.CharField(max_length=100)
+	odf = models.CharField(max_length=100,blank=True)
     area = models.CharField(max_length=50)
-	upbandwidth = models.CharField(max_length=5)
+	upbandwidth = models.CharField(max_length=5,blank=True)
 	
 class ftto(models.Module):
     name = models.CharField(max_length=50,unique=True)
