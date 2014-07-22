@@ -1,5 +1,5 @@
 from django.conf.urls import *
-from CoreNet.views import hello
+from CoreNet.views import hello, corenet
 import testapp
 from testapp import urls
 
@@ -19,5 +19,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^hello/$', hello),
     url(r'^hello1/', include(testapp.urls)),
+	url(r'^corenet/$', corenet),
 )
 
