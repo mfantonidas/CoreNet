@@ -19,6 +19,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^hello/$', hello),
     url(r'^hello1/', include(testapp.urls)),
-	url(r'^corenet/$', corenet),
+    url(r'^corenet/$', corenet),
 )
 

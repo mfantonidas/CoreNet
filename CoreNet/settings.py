@@ -68,11 +68,18 @@ STATIC_ROOT = ''
 # Example: "http://example.com/static/", "http://static.example.com/"
 STATIC_URL = '/static/'
 
+import os.path
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    ("css", os.path.join(STATIC_ROOT, 'css')),
+    ("js", os.path.join(STATIC_ROOT, 'js')),
+    ("images", os.path.join(STATIC_ROOT, 'images')),
+    ("bootstrap", os.path.join(STATIC_ROOT, 'bootstrap')),
+    ("gallery", os.path.join(STATIC_ROOT, 'gallery')),
+    ("file-manager", os.path.join(STATIC_ROOT, 'file-manager')),
 )
 
 # List of finder classes that know how to find static files in
@@ -108,11 +115,12 @@ ROOT_URLCONF = 'CoreNet.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'CoreNet.wsgi.application'
 
+import os.path
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-	os.path.join(os.path.dirname(__file__), '../Templates').replace('\\','/'),
+    os.path.join(os.path.dirname(__file__), '../Templates').replace('\\','/'),
 )
 
 INSTALLED_APPS = (
