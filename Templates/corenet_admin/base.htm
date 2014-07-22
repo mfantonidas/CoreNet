@@ -7,50 +7,50 @@
     
         <!-- Bootstrap framework -->
             <link rel="stylesheet" href="{{ STATIC_URL }}/bootstrap/css/bootstrap.min.css"  />
-            <link rel="stylesheet" href="corenet_admin/bootstrap/css/bootstrap-responsive.min.css"  />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/bootstrap/css/bootstrap-responsive.min.css"  />
         <!-- jQuery UI theme -->
-            <link rel="stylesheet" href="corenet_admin/lib/jquery-ui/css/Aristo/Aristo.css"  />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/lib/jquery-ui/css/Aristo/Aristo.css"  />
         <!-- theme color-->
-            <link rel="stylesheet" href="corenet_admin/css/blue.css"  id="link_theme" />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/css/blue.css"  id="link_theme" />
         <!-- tooltips-->
-            <link rel="stylesheet" href="corenet_admin/lib/jBreadcrumbs/css/BreadCrumb.css"  />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/lib/jBreadcrumbs/css/BreadCrumb.css"  />
         <!-- tooltips-->
-            <link rel="stylesheet" href="corenet_admin/lib/qtip2/jquery.qtip.min.css"  />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/lib/qtip2/jquery.qtip.min.css"  />
 		<!-- colorbox -->
-            <link rel="stylesheet" href="corenet_admin/lib/colorbox/colorbox.css"  />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/lib/colorbox/colorbox.css"  />
         <!-- code prettify -->
-            <link rel="stylesheet" href="corenet_admin/lib/google-code-prettify/prettify.css"  />    
+            <link rel="stylesheet" href="{{ STATIC_URL }}/lib/google-code-prettify/prettify.css"  />    
         <!-- notifications -->
-            <link rel="stylesheet" href="corenet_admin/lib/sticky/sticky.css"  />    
+            <link rel="stylesheet" href="{{ STATIC_URL }}/lib/sticky/sticky.css"  />    
         <!-- aditional icons -->
-            <link rel="stylesheet" href="corenet_admin/img/splashy/splashy.css"  />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/img/splashy/splashy.css"  />
 		<!-- flags -->
-            <link rel="stylesheet" href="corenet_admin/img/flags/flags.css"  />	
+            <link rel="stylesheet" href="{{ STATIC_URL }}/img/flags/flags.css"  />	
 		<!-- calendar -->
-            <link rel="stylesheet" href="corenet_admin/lib/fullcalendar/fullcalendar_gebo.css"  />	
+            <link rel="stylesheet" href="{{ STATIC_URL }}/lib/fullcalendar/fullcalendar_gebo.css"  />	
 		<!-- datepicker -->
-            <link rel="stylesheet" href="corenet_admin/lib/datepicker/datepicker.css"  />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/lib/datepicker/datepicker.css"  />
         <!-- tag handler -->
-            <link rel="stylesheet" href="corenet_admin/lib/tag_handler/css/jquery.taghandler.css"  />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/lib/tag_handler/css/jquery.taghandler.css"  />
         <!-- uniform -->
-            <link rel="stylesheet" href="corenet_admin/lib/uniform/Aristo/uniform.aristo.css"  />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/lib/uniform/Aristo/uniform.aristo.css"  />
 		<!-- multiselect -->
-            <link rel="stylesheet" href="corenet_admin/lib/multi-select/css/multi-select.css"  />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/lib/multi-select/css/multi-select.css"  />
 		<!-- enhanced select -->
-            <link rel="stylesheet" href="corenet_admin/lib/chosen/chosen.css"  />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/lib/chosen/chosen.css"  />
         <!-- wizard -->
-            <link rel="stylesheet" href="corenet_admin/lib/stepy/css/jquery.stepy.css"  />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/lib/stepy/css/jquery.stepy.css"  />
         <!-- upload -->
-            <link rel="stylesheet" href="corenet_admin/lib/plupload/js/jquery.plupload.queue/css/plupload-gebo.css"  />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/lib/plupload/js/jquery.plupload.queue/css/plupload-gebo.css"  />
 		<!-- CLEditor -->
-            <link rel="stylesheet" href="corenet_admin/lib/CLEditor/jquery.cleditor.css"  />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/lib/CLEditor/jquery.cleditor.css"  />
 		<!-- colorpicker -->
-            <link rel="stylesheet" href="corenet_admin/lib/colorpicker/css/colorpicker.css"  />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/lib/colorpicker/css/colorpicker.css"  />
 		<!-- smoke_js -->
-            <link rel="stylesheet" href="corenet_admin/lib/smoke/themes/gebo.css"  />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/lib/smoke/themes/gebo.css"  />
 					
         <!-- main styles -->
-            <link rel="stylesheet" href="corenet_admin/css/style.css"  />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/css/style.css"  />
 			
             <link href="../../fonts.googleapis.com/css-family=PT+Sans.css"  rel='stylesheet' type='text/css'>
 	
@@ -58,13 +58,13 @@
             <link rel="shortcut icon" href="favicon.ico" />
 		
         <!--[if lte IE 8]>
-            <link rel="stylesheet" href="corenet_admin/css/ie.css"  />
+            <link rel="stylesheet" href="{{ STATIC_URL }}/css/ie.css"  />
         <![endif]-->
         	
         <!--[if lt IE 9]>
-			<script src="corenet_admin/js/ie/html5.js" ></script>
-			<script src="corenet_admin/js/ie/respond.min.js" ></script>
-			<script src="corenet_admin/lib/flot/excanvas.min.js" ></script>
+			<script src="{{ STATIC_URL }}/js/ie/html5.js" ></script>
+			<script src="{{ STATIC_URL }}/js/ie/respond.min.js" ></script>
+			<script src="{{ STATIC_URL }}/lib/flot/excanvas.min.js" ></script>
         <![endif]-->
 		<script>
 			//* hide all elements & show preloader
@@ -72,7 +72,7 @@
 		</script>
     </head>
     <body>
-        <div id="loading_layer" style="display:none"><img src="corenet_admin/img/ajax_loader.gif"  alt="" /></div>
+        <div id="loading_layer" style="display:none"><img src="{{ STATIC_URL }}/img/ajax_loader.gif"  alt="" /></div>
 		<div class="style_switcher">
 			<div class="sepH_c">
 				<p>Colors:</p>
@@ -155,12 +155,12 @@
 								</li>
 								<li class="divider-vertical hidden-phone hidden-tablet"></li>
 								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="corenet_admin/img/user_avatar.png"  alt="" class="user_avatar" />Johny Smith <b class="caret"></b></a>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="{{ STATIC_URL }}/img/user_avatar.png"  alt="" class="user_avatar" />Johny Smith <b class="caret"></b></a>
 									<ul class="dropdown-menu">
-										<li><a href="corenet_admin/user_profile.htm" >My Profile</a></li>
+										<li><a href="{{ STATIC_URL }}/user_profile.htm" >My Profile</a></li>
 										<li><a href="javascrip:void(0)">Another action</a></li>
 										<li class="divider"></li>
-										<li><a href="corenet_admin/index.htm" >Log Out</a></li>
+										<li><a href="{{ STATIC_URL }}/index.htm" >Log Out</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -168,23 +168,23 @@
 								<li class="dropdown">
 									<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-list-alt icon-white"></i> Forms <b class="caret"></b></a>
 									<ul class="dropdown-menu">
-										<li><a href="corenet_admin/form_elements.htm" >Form elements</a></li>
-										<li><a href="corenet_admin/form_extended.htm" >Extended form elements</a></li>
-										<li><a href="corenet_admin/form_validation.htm" >Form Validation</a></li>
+										<li><a href="{{ STATIC_URL }}/form_elements.htm" >Form elements</a></li>
+										<li><a href="{{ STATIC_URL }}/form_extended.htm" >Extended form elements</a></li>
+										<li><a href="{{ STATIC_URL }}/form_validation.htm" >Form Validation</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
 									<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-th icon-white"></i> Components <b class="caret"></b></a>
 									<ul class="dropdown-menu">
-										<li><a href="corenet_admin/alerts_btns.htm" >Alerts & Buttons</a></li>
-										<li><a href="corenet_admin/icons.htm" >Icons</a></li>
-										<li><a href="corenet_admin/notifications.htm" >Notifications</a></li>
-										<li><a href="corenet_admin/tables.htm" >Tables</a></li>
-										<li><a href="corenet_admin/tables_more.htm" >Tables (more examples)</a></li>
-										<li><a href="corenet_admin/tabs_accordion.htm" >Tabs & Accordion</a></li>
-										<li><a href="corenet_admin/tooltips.htm" >Tooltips, Popovers</a></li>
-										<li><a href="corenet_admin/typography.htm" >Typography</a></li>
-										<li><a href="corenet_admin/widgets.htm" >Widget boxes</a></li>
+										<li><a href="{{ STATIC_URL }}/alerts_btns.htm" >Alerts & Buttons</a></li>
+										<li><a href="{{ STATIC_URL }}/icons.htm" >Icons</a></li>
+										<li><a href="{{ STATIC_URL }}/notifications.htm" >Notifications</a></li>
+										<li><a href="{{ STATIC_URL }}/tables.htm" >Tables</a></li>
+										<li><a href="{{ STATIC_URL }}/tables_more.htm" >Tables (more examples)</a></li>
+										<li><a href="{{ STATIC_URL }}/tabs_accordion.htm" >Tabs & Accordion</a></li>
+										<li><a href="{{ STATIC_URL }}/tooltips.htm" >Tooltips, Popovers</a></li>
+										<li><a href="{{ STATIC_URL }}/typography.htm" >Typography</a></li>
+										<li><a href="{{ STATIC_URL }}/widgets.htm" >Widget boxes</a></li>
 										<li class="dropdown">
 											<a href="#">Sub menu <b class="caret-right"></b></a>
 											<ul class="dropdown-menu">
@@ -206,26 +206,26 @@
 								<li class="dropdown">
 									<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-wrench icon-white"></i> Plugins <b class="caret"></b></a>
 									<ul class="dropdown-menu">
-										<li><a href="corenet_admin/charts.htm" >Charts</a></li>
-										<li><a href="corenet_admin/calendar.htm" >Calendar</a></li>
-										<li><a href="corenet_admin/datatable.htm" >Datatable</a></li>
-										<li><a href="corenet_admin/file_manager.htm" >File Manager</a></li>
-										<li><a href="corenet_admin/floating_header.htm" >Floating List Header</a></li>
-										<li><a href="corenet_admin/google_maps.htm" >Google Maps</a></li>
-										<li><a href="corenet_admin/gallery.htm" >Gallery Grid</a></li>
-										<li><a href="corenet_admin/wizard.htm" >Wizard</a></li>
+										<li><a href="{{ STATIC_URL }}/charts.htm" >Charts</a></li>
+										<li><a href="{{ STATIC_URL }}/calendar.htm" >Calendar</a></li>
+										<li><a href="{{ STATIC_URL }}/datatable.htm" >Datatable</a></li>
+										<li><a href="{{ STATIC_URL }}/file_manager.htm" >File Manager</a></li>
+										<li><a href="{{ STATIC_URL }}/floating_header.htm" >Floating List Header</a></li>
+										<li><a href="{{ STATIC_URL }}/google_maps.htm" >Google Maps</a></li>
+										<li><a href="{{ STATIC_URL }}/gallery.htm" >Gallery Grid</a></li>
+										<li><a href="{{ STATIC_URL }}/wizard.htm" >Wizard</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
 									<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-file icon-white"></i> Pages <b class="caret"></b></a>
 									<ul class="dropdown-menu">
-										<li><a href="corenet_admin/chat.htm" > Chat</a></li>
-										<li><a href="corenet_admin/error_404.html" > Error 404</a></li>
-										<li><a href="corenet_admin/invoice.htm" > Invoice</a></li>
-										<li><a href="corenet_admin/mailbox.htm" >Mailbox</a></li>
-										<li><a href="corenet_admin/search_page.htm" >Search page</a></li>
-										<li><a href="corenet_admin/user_profile.htm" >User profile</a></li>
-										<li><a href="corenet_admin/user_static.htm" >User profile (static)</a></li>
+										<li><a href="{{ STATIC_URL }}/chat.htm" > Chat</a></li>
+										<li><a href="{{ STATIC_URL }}/error_404.html" > Error 404</a></li>
+										<li><a href="{{ STATIC_URL }}/invoice.htm" > Invoice</a></li>
+										<li><a href="{{ STATIC_URL }}/mailbox.htm" >Mailbox</a></li>
+										<li><a href="{{ STATIC_URL }}/search_page.htm" >Search page</a></li>
+										<li><a href="{{ STATIC_URL }}/user_profile.htm" >User profile</a></li>
+										<li><a href="{{ STATIC_URL }}/user_static.htm" >User profile (static)</a></li>
 									</ul>
 								</li>
 								<li>
@@ -499,48 +499,48 @@
 			<div id="small_grid" class="wmk_grid">
 				<ul>
 										<li class="thumbnail">
-						<a href="corenet_admin/gallery/Image04.jpg"  title="Image_4 title long title long title long">
-							<img src="corenet_admin/gallery/Image04_tn.jpg"  alt="" />
+						<a href="{{ STATIC_URL }}/gallery/Image04.jpg"  title="Image_4 title long title long title long">
+							<img src="{{ STATIC_URL }}/gallery/Image04_tn.jpg"  alt="" />
 						</a>
 						<p>
 							<span>375KB<br/>11/05/2012</span>
 						</p>
 					</li>
 										<li class="thumbnail">
-						<a href="corenet_admin/gallery/Image05.jpg"  title="Image_5 title long title long title long">
-							<img src="corenet_admin/gallery/Image05_tn.jpg"  alt="" />
+						<a href="{{ STATIC_URL }}/gallery/Image05.jpg"  title="Image_5 title long title long title long">
+							<img src="{{ STATIC_URL }}/gallery/Image05_tn.jpg"  alt="" />
 						</a>
 						<p>
 							<span>336KB<br/>12/05/2012</span>
 						</p>
 					</li>
 										<li class="thumbnail">
-						<a href="corenet_admin/gallery/Image06.jpg"  title="Image_6 title long title long title long">
-							<img src="corenet_admin/gallery/Image06_tn.jpg"  alt="" />
+						<a href="{{ STATIC_URL }}/gallery/Image06.jpg"  title="Image_6 title long title long title long">
+							<img src="{{ STATIC_URL }}/gallery/Image06_tn.jpg"  alt="" />
 						</a>
 						<p>
 							<span>169KB<br/>28/05/2012</span>
 						</p>
 					</li>
 										<li class="thumbnail">
-						<a href="corenet_admin/gallery/Image07.jpg"  title="Image_7 title long title long title long">
-							<img src="corenet_admin/gallery/Image07_tn.jpg"  alt="" />
+						<a href="{{ STATIC_URL }}/gallery/Image07.jpg"  title="Image_7 title long title long title long">
+							<img src="{{ STATIC_URL }}/gallery/Image07_tn.jpg"  alt="" />
 						</a>
 						<p>
 							<span>381KB<br/>13/05/2012</span>
 						</p>
 					</li>
 										<li class="thumbnail">
-						<a href="corenet_admin/gallery/Image08.jpg"  title="Image_8 title long title long title long">
-							<img src="corenet_admin/gallery/Image08_tn.jpg"  alt="" />
+						<a href="{{ STATIC_URL }}/gallery/Image08.jpg"  title="Image_8 title long title long title long">
+							<img src="{{ STATIC_URL }}/gallery/Image08_tn.jpg"  alt="" />
 						</a>
 						<p>
 							<span>268KB<br/>22/06/2012</span>
 						</p>
 					</li>
 										<li class="thumbnail">
-						<a href="corenet_admin/gallery/Image09.jpg"  title="Image_9 title long title long title long">
-							<img src="corenet_admin/gallery/Image09_tn.jpg"  alt="" />
+						<a href="{{ STATIC_URL }}/gallery/Image09.jpg"  title="Image_9 title long title long title long">
+							<img src="{{ STATIC_URL }}/gallery/Image09_tn.jpg"  alt="" />
 						</a>
 						<p>
 							<span>173KB<br/>28/05/2012</span>
@@ -548,47 +548,47 @@
 					</li>
 										<li class="thumbnail">
 						<a href="javascript:if(confirm('http://tzd-themes.com/gebo_admin/gallery/Image10.jpg  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ������, �����������, ����Ŀ����ֹͣ��  \n\n�����ڷ������ϴ���?'))window.location='http://tzd-themes.com/gebo_admin/gallery/Image10.jpg'"  title="Image_10 title long title long title long">
-							<img src="corenet_admin/gallery/Image10_tn.jpg"  alt="" />
+							<img src="{{ STATIC_URL }}/gallery/Image10_tn.jpg"  alt="" />
 						</a>
 						<p>
 							<span>120KB<br/>15/06/2012</span>
 						</p>
 					</li>
 										<li class="thumbnail">
-						<a href="corenet_admin/gallery/Image11.jpg"  title="Image_11 title long title long title long">
-							<img src="corenet_admin/gallery/Image11_tn.jpg"  alt="" />
+						<a href="{{ STATIC_URL }}/gallery/Image11.jpg"  title="Image_11 title long title long title long">
+							<img src="{{ STATIC_URL }}/gallery/Image11_tn.jpg"  alt="" />
 						</a>
 						<p>
 							<span>383KB<br/>10/05/2012</span>
 						</p>
 					</li>
 										<li class="thumbnail">
-						<a href="corenet_admin/gallery/Image12.jpg"  title="Image_12 title long title long title long">
-							<img src="corenet_admin/gallery/Image12_tn.jpg"  alt="" />
+						<a href="{{ STATIC_URL }}/gallery/Image12.jpg"  title="Image_12 title long title long title long">
+							<img src="{{ STATIC_URL }}/gallery/Image12_tn.jpg"  alt="" />
 						</a>
 						<p>
 							<span>225KB<br/>22/05/2012</span>
 						</p>
 					</li>
 										<li class="thumbnail">
-						<a href="corenet_admin/gallery/Image13.jpg"  title="Image_13 title long title long title long">
-							<img src="corenet_admin/gallery/Image13_tn.jpg"  alt="" />
+						<a href="{{ STATIC_URL }}/gallery/Image13.jpg"  title="Image_13 title long title long title long">
+							<img src="{{ STATIC_URL }}/gallery/Image13_tn.jpg"  alt="" />
 						</a>
 						<p>
 							<span>181KB<br/>23/05/2012</span>
 						</p>
 					</li>
 										<li class="thumbnail">
-						<a href="corenet_admin/gallery/Image14.jpg"  title="Image_14 title long title long title long">
-							<img src="corenet_admin/gallery/Image14_tn.jpg"  alt="" />
+						<a href="{{ STATIC_URL }}/gallery/Image14.jpg"  title="Image_14 title long title long title long">
+							<img src="{{ STATIC_URL }}/gallery/Image14_tn.jpg"  alt="" />
 						</a>
 						<p>
 							<span>372KB<br/>22/05/2012</span>
 						</p>
 					</li>
 										<li class="thumbnail">
-						<a href="corenet_admin/gallery/Image15.jpg"  title="Image_15 title long title long title long">
-							<img src="corenet_admin/gallery/Image15_tn.jpg"  alt="" />
+						<a href="{{ STATIC_URL }}/gallery/Image15.jpg"  title="Image_15 title long title long title long">
+							<img src="{{ STATIC_URL }}/gallery/Image15_tn.jpg"  alt="" />
 						</a>
 						<p>
 							<span>169KB<br/>18/05/2012</span>
@@ -890,44 +890,44 @@
 
 </div>
 
-    <script src="corenet_admin/js/jquery.min.js" ></script>
-    <script src="corenet_admin/lib/jquery-ui/jquery-ui-1.8.23.custom.min.js" ></script>
+    <script src="{{ STATIC_URL }}/js/jquery.min.js" ></script>
+    <script src="{{ STATIC_URL }}/lib/jquery-ui/jquery-ui-1.8.23.custom.min.js" ></script>
     <!-- touch events for jquery ui-->
-	<script src="corenet_admin/js/forms/jquery.ui.touch-punch.min.js" ></script>
+	<script src="{{ STATIC_URL }}/js/forms/jquery.ui.touch-punch.min.js" ></script>
     <!-- easing plugin -->
-	<script src="corenet_admin/js/jquery.easing.1.3.min.js" ></script>
+	<script src="{{ STATIC_URL }}/js/jquery.easing.1.3.min.js" ></script>
     <!-- smart resize event -->
-	<script src="corenet_admin/js/jquery.debouncedresize.min.js" ></script>
+	<script src="{{ STATIC_URL }}/js/jquery.debouncedresize.min.js" ></script>
     <!-- js cookie plugin -->
-	<script src="corenet_admin/js/jquery.cookie.min.js" ></script>
+	<script src="{{ STATIC_URL }}/js/jquery.cookie.min.js" ></script>
     <!-- main bootstrap js -->
-	<script src="corenet_admin/bootstrap/js/bootstrap.min.js" ></script>
+	<script src="{{ STATIC_URL }}/bootstrap/js/bootstrap.min.js" ></script>
     <!-- bootstrap plugins -->
-	<script src="corenet_admin/js/bootstrap.plugins.min.js" ></script>
+	<script src="{{ STATIC_URL }}/js/bootstrap.plugins.min.js" ></script>
     <!-- code prettifier -->
-	<script src="corenet_admin/lib/google-code-prettify/prettify.min.js" ></script>
+	<script src="{{ STATIC_URL }}/lib/google-code-prettify/prettify.min.js" ></script>
     <!-- sticky messages -->
-	<script src="corenet_admin/lib/sticky/sticky.min.js" ></script>
+	<script src="{{ STATIC_URL }}/lib/sticky/sticky.min.js" ></script>
     <!-- tooltips -->
-	<script src="corenet_admin/lib/qtip2/jquery.qtip.min.js" ></script>
+	<script src="{{ STATIC_URL }}/lib/qtip2/jquery.qtip.min.js" ></script>
     <!-- lightbox -->
-	<script src="corenet_admin/lib/colorbox/jquery.colorbox.min.js" ></script>
+	<script src="{{ STATIC_URL }}/lib/colorbox/jquery.colorbox.min.js" ></script>
     <!-- jBreadcrumbs -->
-	<script src="corenet_admin/lib/jBreadcrumbs/js/jquery.jBreadCrumb.1.1.min.js" ></script>
+	<script src="{{ STATIC_URL }}/lib/jBreadcrumbs/js/jquery.jBreadCrumb.1.1.min.js" ></script>
 	<!-- hidden elements width/height -->
-	<script src="corenet_admin/js/jquery.actual.min.js" ></script>
+	<script src="{{ STATIC_URL }}/js/jquery.actual.min.js" ></script>
 	<!-- scroll -->
-	<script src="corenet_admin/lib/antiscroll/antiscroll.js" ></script>
-	<script src="corenet_admin/lib/antiscroll/jquery-mousewheel.js" ></script>
+	<script src="{{ STATIC_URL }}/lib/antiscroll/antiscroll.js" ></script>
+	<script src="{{ STATIC_URL }}/lib/antiscroll/jquery-mousewheel.js" ></script>
 	<!-- fix for ios orientation change -->
-	<script src="corenet_admin/js/ios-orientationchange-fix.js" ></script>
+	<script src="{{ STATIC_URL }}/js/ios-orientationchange-fix.js" ></script>
 	<!-- to top -->
-	<script src="corenet_admin/lib/UItoTop/jquery.ui.totop.min.js" ></script>
+	<script src="{{ STATIC_URL }}/lib/UItoTop/jquery.ui.totop.min.js" ></script>
 	<!-- mobile nav -->
-	<script src="corenet_admin/js/selectNav.js" ></script>
+	<script src="{{ STATIC_URL }}/js/selectNav.js" ></script>
 
 	<!-- common functions -->
-	<script src="corenet_admin/js/gebo_common.js" ></script>
+	<script src="{{ STATIC_URL }}/js/gebo_common.js" ></script>
 
 <!--	<script type="text/javascript">
 		$.colorbox({
@@ -937,23 +937,23 @@
 		});
 	</script>-->
     <!-- multi-column layout -->
-    <script src="corenet_admin/js/jquery.imagesloaded.min.js" ></script>
-    <script src="corenet_admin/js/jquery.wookmark.js" ></script>
+    <script src="{{ STATIC_URL }}/js/jquery.imagesloaded.min.js" ></script>
+    <script src="{{ STATIC_URL }}/js/jquery.wookmark.js" ></script>
     <!-- responsive table -->
-	<script src="corenet_admin/js/jquery.mediaTable.min.js" ></script>
+	<script src="{{ STATIC_URL }}/js/jquery.mediaTable.min.js" ></script>
 	<!-- small charts -->
-	<script src="corenet_admin/js/jquery.peity.min.js" ></script>
+	<script src="{{ STATIC_URL }}/js/jquery.peity.min.js" ></script>
 	<!-- charts -->
-	<script src="corenet_admin/lib/flot/jquery.flot.min.js" ></script>
-    <script src="corenet_admin/lib/flot/jquery.flot.resize.min.js" ></script>
-    <script src="corenet_admin/lib/flot/jquery.flot.pie.min.js" ></script>
+	<script src="{{ STATIC_URL }}/lib/flot/jquery.flot.min.js" ></script>
+    <script src="{{ STATIC_URL }}/lib/flot/jquery.flot.resize.min.js" ></script>
+    <script src="{{ STATIC_URL }}/lib/flot/jquery.flot.pie.min.js" ></script>
     <!-- calendar -->
-	<script src="corenet_admin/lib/fullcalendar/fullcalendar.min.js" ></script>
+	<script src="{{ STATIC_URL }}/lib/fullcalendar/fullcalendar.min.js" ></script>
     <!-- sortable/filterable list -->
-	<script src="corenet_admin/lib/list_js/list.min.js" ></script>
-    <script src="corenet_admin/lib/list_js/plugins/paging/list.paging.min.js" ></script>
+	<script src="{{ STATIC_URL }}/lib/list_js/list.min.js" ></script>
+    <script src="{{ STATIC_URL }}/lib/list_js/plugins/paging/list.paging.min.js" ></script>
 	<!-- dashboard functions -->
-	<script src="corenet_admin/js/gebo_dashboard.js" ></script>
+	<script src="{{ STATIC_URL }}/js/gebo_dashboard.js" ></script>
 
 	
 	
