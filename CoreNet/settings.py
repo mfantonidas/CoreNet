@@ -129,6 +129,7 @@ INSTALLED_APPS = (
     'CoreNet',
     'olts',
     'tips',
+    'CoreNE',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
