@@ -5,4 +5,4 @@ def hello(request):
     return HttpResponse('shit~~')                                                                                                       
 
 def corenet(request):
-    return render_to_response('corenet_admin/corenet.html', ,context_instance=RequestContext(request))
+    return render_to_response('corenet_admin/corenet.html', {},context_instance=RequestContext(request))
