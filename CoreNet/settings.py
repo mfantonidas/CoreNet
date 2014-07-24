@@ -79,6 +79,7 @@ STATICFILES_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     ("css", os.path.join(STATIC_ROOT, 'css')),
     ("js", os.path.join(STATIC_ROOT, 'js')),
+    ("lib", os.path.join(STATIC_ROOT, 'lib')),
     ("img", os.path.join(STATIC_ROOT, 'img')),
     ("bootstrap", os.path.join(STATIC_ROOT, 'bootstrap')),
     ("gallery", os.path.join(STATIC_ROOT, 'gallery')),
