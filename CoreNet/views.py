@@ -7,3 +7,5 @@ def hello(request):
 
 def corenet(request):
     return render_to_response('corenet_admin/corenet.html', {},context_instance=RequestContext(request))
+
+def main(request):

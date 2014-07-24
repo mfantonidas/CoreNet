@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CoreNet Admin Panel</title>
+        <title>{% block title %}{% endblock %}</title>
     
         <!-- Bootstrap framework -->
             <link rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap.min.css"  />
@@ -70,6 +70,7 @@
 			//* hide all elements & show preloader
 			document.documentElement.className += 'js';
 		</script>
+		{% block extra_head %}{% endblock extra_head %}
     </head>
     <body>
         <div id="loading_layer" style="display:none"><img src="{{ STATIC_URL }}img/ajax_loader.gif"  alt="" /></div>
@@ -135,14 +136,9 @@
 				<div class="navbar navbar-fixed-top">
 					<div class="navbar-inner">
 						<div class="container-fluid">
-							<a class="brand" href="dashboard.htm" ><i class="icon-home icon-white"></i> Gebo Admin <span class="sml_t">1.6</span></a>
+							<a class="brand" href="dashboard.htm" ><i class="icon-home icon-white"></i> CoreNet Admin <span class="sml_t">0.1</span></a>
 							<ul class="nav user_menu pull-right">
-								<li class="hidden-phone hidden-tablet">
-									<div class="nb_boxes clearfix">
-										<a data-toggle="modal" data-backdrop="static" href="#myMail" class="label ttip_b" title="New messages">25 <i class="splashy-mail_light"></i></a>
-										<a data-toggle="modal" data-backdrop="static" href="#myTasks" class="label ttip_b" title="New tasks">10 <i class="splashy-calendar_week"></i></a>
-									</div>
-								</li>
+								<li class="hidden-phone hidden-tablet"></li>
 								<li class="divider-vertical hidden-phone hidden-tablet"></li>
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle nav_condensed" data-toggle="dropdown"><i class="flag-gb"></i> <b class="caret"></b></a>
