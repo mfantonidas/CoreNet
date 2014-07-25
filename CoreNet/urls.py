@@ -1,5 +1,6 @@
 from django.conf.urls import *
 from CoreNet.views import hello, corenet
+from CoreNet.views import login_view, logout_view
 import testapp
 from testapp import urls
 
@@ -20,5 +21,7 @@ urlpatterns = patterns('',
     url(r'^hello/$', hello),
     url(r'^hello1/', include(testapp.urls)),
     url(r'^corenet/$', corenet),
+	url(r'^accounts/login/$', login_view),
+	url(r'^accounts/logout/$', logout_view),
 )
 
