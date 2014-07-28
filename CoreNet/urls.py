@@ -20,8 +20,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^hello/$', hello),
     url(r'^hello1/', include(testapp.urls)),
-    url(r'^corenet/$', "views.corenet",name='main_page'),
-	url(r'^accounts/login$', "views.login_view", name='accounts_login'),
-	url(r'^accounts/logout$', "views.logout_view", name='accounts_logout'),
+    url(r'^corenet/$', "CoreNet.views.corenet",name='main_page'),
+	url(r'^accounts/login$', "CoreNet.views.login_view", name='accounts_login'),
+	url(r'^accounts/logout$', "CoreNet.views.logout_view", name='accounts_logout'),
 )
 
