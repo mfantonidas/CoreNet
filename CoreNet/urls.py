@@ -1,8 +1,6 @@
 from django.conf.urls import *
-#from CoreNet.views import hello, corenet
-from CoreNet.views import login_view, logout_view
-import testapp
-from testapp import urls
+from CoreNet.views import hello, corenet
+from CoreNet.views import login, logout
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -18,10 +16,9 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    #url(r'^hello/$', hello),
-    #url(r'^hello1/', include(testapp.urls)),
-    url(r'^corenet/$', "CoreNet.views.corenet",name='main_page'),
-    url(r'^accounts/login$', "CoreNet.views.login_view", name='accounts_login'),
-    url(r'^accounts/logout$', "CoreNet.views.logout_view", name='accounts_logout'),
+    url(r'^hello/$', hello),
+    url(r'^corenet/$', corenet),
+    url(r'^accounts/login$', login),
+    url(r'^accounts/logout$', logout),
 )
 
