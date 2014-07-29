@@ -1,3 +1,5 @@
+#coding=utf-8
+
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
@@ -21,7 +23,7 @@ def hello(request):
 def corenet(request):
     if request.user.is_authenticated():
 	    user = request.user
-	else:
+    else:
 	    user = request.user
     return render_to_response('corenet_admin/corenet.html', {'user':user},context_instance=RequestContext(request))
 
@@ -39,7 +41,7 @@ def validate_login(request, username, password):
  
     return return_value
 	
-def login_view(request):
+def login(request):
     template_var = {}
     form = LoginForm()
     if request.method == "POST":
@@ -50,7 +52,7 @@ def login_view(request):
     template_var["form"] = form
     return render_to_response('corenet_admin/login.html', template_var, context_instance=RequestContext(request));
     
-def logout_view(request):
+def logout(request):
     auth_logout(request)
     return HttpResponseRedirect(reverse('main_page'))
 	
