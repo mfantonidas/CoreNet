@@ -17,9 +17,6 @@ from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.views.decorators.cache import never_cache
 from django.views.decorators.http import require_POST
 
-def hello(request):    
-    return HttpResponse('shit~~')                                                                                                       
-
 def corenet(request):
     if request.user.is_authenticated():
 	    user = request.user
@@ -35,10 +32,10 @@ def validate_login(request, username, password):
             auth_login(request,user)
             return_value = True
         else:
-            messages.add_message(request, messages.INFO, _(u'此账户尚未激活，请联系管理员'))
+            messages.add_message(request, messages.INFO, 'aaaa')
     else:
-        messages.add_message(request, messages.INFO, _(u'此账户不存在，请联管理员'))
- 
+        messages.add_message(request, messages.INFO, 'bbbb')
+
     return return_value
 	
 def login(request):
@@ -47,15 +44,15 @@ def login(request):
     if request.method == "POST":
         form = LoginForm(request.POST.copy())
         if form.is_valid():
-            validate_login(request, form.cleaned_data["username"], form.cleaned_data["password"])
-            return HttpResponseRedirect(reverse('main_page'))
+            if validate_login(request, form.cleaned_data["username"], form.cleaned_data["password"]):
+                return HttpResponseRedirect(reverse('main_page'))
     template_var["form"] = form
     return render_to_response('corenet_admin/login.html', template_var, context_instance=RequestContext(request));
     
 def logout(request):
     auth_logout(request)
     return HttpResponseRedirect(reverse('main_page'))
-	
+
 class LoginForm(forms.Form):
-    username=forms.CharField(label=_(u"登录账号"), widget=forms.TextInput(attrs={'placeholder':'登录账号','class':'input-block-level'}))
-    password=forms.CharField(label=_(u"登录密码"), widget=forms.PasswordInput(attrs={'placeholder':'登录密码','class':'input-block-level'}))
+    username = forms.CharField(label=_(u"Login Account"), widget=forms.TextInput(attrs={'placehoder':'Login Account','class':'input-block-level'}))
+    password = forms.CharField(label=_(u"Password"), widget=forms.PasswordInput(attrs={'placeholder':'Password','class':'input-block-level'}))

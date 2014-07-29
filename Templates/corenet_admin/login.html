@@ -27,10 +27,10 @@
 		
     </head>
     <body>
-		
 		<div class="login_box">
 			
-			<form action="/accounts/login/" method="post" id="login_form">
+			<form action="/account/login" method="post" id="login_form">
+                                {% csrf_token %}
 				<div class="top_b">Sign in to CoreNet Admin</div>    
 				<div class="alert alert-info alert-login">
 					Clear username and password field to see validation.
