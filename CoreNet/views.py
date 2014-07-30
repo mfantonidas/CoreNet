@@ -54,5 +54,5 @@ def logout(request):
     return HttpResponseRedirect(reverse('main_page'))
 
 class LoginForm(forms.Form):
-    username = forms.CharField(label=_(u"Login Account"), widget=forms.TextInput(attrs={'placehoder':'Login Account','class':'input-block-level'}))
-    password = forms.CharField(label=_(u"Password"), widget=forms.PasswordInput(attrs={'placeholder':'Password','class':'input-block-level'}))
+    username = forms.CharField(label=_(u"Login Account"), widget=forms.TextInput(attrs={'placehoder':'Username', 'id':'username', 'name':'username', 'value':'Your Account'}))
+    password = forms.CharField(label=_(u"Password"), widget=forms.PasswordInput(attrs={'placeholder':'Password','id':'password', 'name':'password', 'value':'password'}))
