@@ -35,12 +35,17 @@
 				<div class="cnt_b">
 					<div class="formRow">
 						<div class="input-prepend">
-							<span class="add-on"><i class="icon-user"></i></span>{{ form.username }}<!-- <input type="text" id="username" name="username" placeholder="Username" value="John Smith" /> -->
+							<span class="add-on"><i class="icon-user"></i></span>{{ form.username }}
 						</div>
 					</div>
+					
+					<div class="alert alert-info alert-login">
+					    Clear username and password field to see validation.
+				    </div>
+					{% if form.errors %}
 					<div class="formRow">
 						<div class="input-prepend">
-							<span class="add-on"><i class="icon-lock"></i></span><input type="password" id="password" name="password" placeholder="Password" value="password" />
+							<span class="add-on"><i class="icon-lock"></i></span>{{ form.password }}
 						</div>
 					</div>
 					<div class="formRow clearfix">
