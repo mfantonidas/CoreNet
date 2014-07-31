@@ -13,7 +13,7 @@ from django import forms
 from django.contrib.messages import constants as messages
 from django.contrib import messages
 from django.contrib.auth.models import User
-from django.contrib.auth.decorators import login_requird
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import login,logout
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.views.decorators.cache import never_cache
