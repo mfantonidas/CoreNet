@@ -19,8 +19,8 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     url(r'^account/login$',login),
-	url(r'^account/logout$', logout),
-	#url(r'^account/login$', "CoreNet.views.login", name='accounts_login'),
+    url(r'^account/logout$', logout),
+    #url(r'^account/login$', "CoreNet.views.login", name='accounts_login'),
     #url(r'^account/logout$', "CoreNet.views.logout", name='accounts_logout'),
-    url(r'corenet/', "CoreNet.views.corenet", name='main_page'), 
+    url(r'accounts/profile/$', "CoreNet.views.corenet", name='main_page'), 
 )
