@@ -24,15 +24,7 @@
 
 <div class="container">
     <div class="row">
-        {% if messages %}
-        {% for message in messages %}
-        <div class="alert alert-success">
-            <a class="close" data-dismiss="alert">×</a>
-            <h4 class="alert-heading">{{ message.tags }}</h4>
-            <p>{{ message }}</p>
-        </div>
-        {% endfor %}
-        {% endif %}
+        
         {% block content %}{% endblock content %}
     </div>
 
