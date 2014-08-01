@@ -30,8 +30,8 @@
 		<div class="login_box">
 			
 			<form action="/account/login" method="post" id="login_form">
-                {% csrf_token %}
-				<div class="top_b">Sign in to CoreNet Admin</div>    
+			 {% csrf_token %}	
+                            <div class="top_b">Sign in to CoreNet Admin</div>    
 				<div class="cnt_b">
 					<div class="formRow">
 						<div class="input-prepend">
@@ -46,7 +46,7 @@
 					</div>
                     {% if form.errors %}
 					    <div class="alert alert-error alert-login">
-							{{ form.errors|pluralize }}
+				                 Invalid account or password
 						</div>
                     {% endif %}
 					<div class="formRow clearfix">

@@ -19,8 +19,8 @@ from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.views.decorators.cache import never_cache
 from django.views.decorators.http import require_POST
 
-@login_requird(login_url='/account/login')
-
+@login_required(login_url='/account/login')
+@csrf_protect
 def corenet(request):
     if request.user.is_authenticated():
 	    user = request.user
