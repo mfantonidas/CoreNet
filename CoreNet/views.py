@@ -25,9 +25,9 @@ from django.views.decorators.http import require_POST
 def corenet(request):
     if request.user.is_authenticated():
 	    user = request.user
+		return render_to_response('corenet_admin/corenet.html', {'user':user},context_instance=RequestContext(request))
     else:
-	    user = request.user
-    return render_to_response('corenet_admin/corenet.html', {'user':user},context_instance=RequestContext(request))
+	    return login(request)
 
 #def validate_login(request, username, password):
 #    return_value = False
