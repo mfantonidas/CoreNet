@@ -54,9 +54,9 @@ def corenet(request):
 #    template_var["form"] = form
 #    return render_to_response('corenet_admin/login.html', template_var, context_instance=RequestContext(request));
     
-#def logout(request):
-#    auth_logout(request)
-#    return HttpResponseRedirect(reverse('main_page'))
+def corenet_logout(request):
+    auth_logout(request)
+    return HttpResponseRedirect(reverse('main_page'))
 
 #class LoginForm(forms.Form):
 #    username = forms.CharField(label=_(u"Login Account"), widget=forms.TextInput(attrs={'placehoder':'Username', 'id':'username', 'name':'username', 'value':'Your Account'}))
