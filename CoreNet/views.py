@@ -26,7 +26,8 @@ from tips.models import contact_info
 def corenet(request):
     if request.user.is_authenticated():
         user = request.user
-	return render_to_response('corenet_admin/corenet.html', {'user':user, 'contact':contact_info},context_instance=RequestContext(request))
+		c = contact_info.objects.all()
+	return render_to_response('corenet_admin/corenet.html', {'user':user, 'contact':c},context_instance=RequestContext(request))
     else:
 	return login(request)
 
