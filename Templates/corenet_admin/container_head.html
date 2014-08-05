@@ -1,0 +1,86 @@
+<header>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="brand" href="dashboard.htm" ><i class="icon-home icon-white"></i> CoreNet Admin <span class="sml_t">0.1</span></a>
+				<ul class="nav user_menu pull-right">
+					<li class="hidden-phone hidden-tablet"></li>
+					<li class="divider-vertical hidden-phone hidden-tablet"></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="{{ STATIC_URL }}/img/user_avatar.png"  alt="" class="user_avatar" />{{ user }} <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="javascrip:void(0)" >My Profile</a></li>
+							<li><a href="javascrip:void(0)">Another action</a></li>
+							<li class="divider"></li>
+							<li><a href="/account/logout" >Log Out</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav" id="mobile-nav">
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-list-alt icon-white"></i> PON <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="{{ TEMPLATE_DIRS }}form_elements.htm" >OLT信息</a></li>
+							<li class="dropdown">
+								<a href="#">ONU信息<b class="caret-right"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="{{ STATIC_URL }}form_extended.htm" >1FTTB信息</a></li>
+									<li><a href="{{ STATIC_URL }}form_validation.htm" >FTTO信息</a></li>
+									<li><a href="{{ STATIC_URL }}form_validation.htm" >FTTH信息</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">工具<b class="caret-right"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="{{ STATIC_URL }}form_extended.htm" >北向下发</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-th icon-white"></i> 软交换 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="{{ STATIC_URL }}alerts_btns.htm" >aaa</a></li>
+							<li class="dropdown">
+								<a href="#">网元信息 <b class="caret-right"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Soft3000</a></li>
+									<li><a href="#">SE2300</a></li>
+									<li><a href="#">SE2600</a></li>
+									<li>
+										<a href="#">Sub menu 1.4 <b class="caret-right"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Sub menu 1.4.1</a></li>
+											<li><a href="#">Sub menu 1.4.2</a></li>
+											<li><a href="#">Sub menu 1.4.3</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-wrench icon-white"></i> IMS <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="{{ STATIC_URL }}charts.htm" >SIP</a></li>
+							<li><a href="{{ STATIC_URL }}calendar.htm" >AGCP</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-file icon-white"></i> 常用工具 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="{{ STATIC_URL }}chat.htm" > Chat</a></li>
+							<li><a href="{{ STATIC_URL }}error_404.html" > Error 404</a></li>
+							<li><a href="{{ STATIC_URL }}invoice.htm" > Invoice</a></li>
+							<li><a href="{{ STATIC_URL }}mailbox.htm" >Mailbox</a></li>
+							<li><a href="{{ STATIC_URL }}search_page.htm" >Search page</a></li>
+							<li><a href="{{ STATIC_URL }}user_profile.htm" >User profile</a></li>
+							<li><a href="{{ STATIC_URL }}user_static.htm" >User profile (static)</a></li>
+						</ul>
+					</li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
