@@ -18,6 +18,7 @@ from django.contrib.auth.views import login,logout
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.views.decorators.cache import never_cache
 from django.views.decorators.http import require_POST
+from tips.models import contact_info
 
 @csrf_protect
 @login_required(login_url='/account/login')
@@ -25,7 +26,8 @@ from django.views.decorators.http import require_POST
 def corenet(request):
     if request.user.is_authenticated():
         user = request.user
-	return render_to_response('corenet_admin/corenet.html', {'user':user},context_instance=RequestContext(request))
+		contact = contact_info()
+	return render_to_response('corenet_admin/corenet.html', {'user':user, 'contact':contact_info},context_instance=RequestContext(request))
     else:
 	return login(request)
 
