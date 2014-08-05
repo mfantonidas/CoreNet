@@ -23,29 +23,33 @@
 					<li class="dropdown">
 						<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-list-alt icon-white"></i> PON <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="{{ TEMPLATE_DIRS }}form_elements.htm" >Form elements</a></li>
-							<li><a href="{{ STATIC_URL }}form_extended.htm" >Extended form elements</a></li>
-							<li><a href="{{ STATIC_URL }}form_validation.htm" >Form Validation</a></li>
+							<li><a href="{{ TEMPLATE_DIRS }}form_elements.htm" >OLT信息</a></li>
+							<li class="dropdown">
+								<a href="#">ONU信息<b class="caret-right"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="{{ STATIC_URL }}form_extended.htm" >FTTB信息</a></li>
+									<li><a href="{{ STATIC_URL }}form_validation.htm" >FTTO信息</a></li>
+									<li><a href="{{ STATIC_URL }}form_validation.htm" >FTTH信息</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">工具<b class="caret-right"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="{{ STATIC_URL }}form_extended.htm" >北向下发</a></li>
+								</ul>
+							</li>
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-th icon-white"></i> Components <b class="caret"></b></a>
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-th icon-white"></i> 软交换 <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="{{ STATIC_URL }}alerts_btns.htm" >Alerts & Buttons</a></li>
-							<li><a href="{{ STATIC_URL }}icons.htm" >Icons</a></li>
-							<li><a href="{{ STATIC_URL }}notifications.htm" >Notifications</a></li>
-							<li><a href="{{ STATIC_URL }}tables.htm" >Tables</a></li>
-							<li><a href="{{ STATIC_URL }}tables_more.htm" >Tables (more examples)</a></li>
-							<li><a href="{{ STATIC_URL }}tabs_accordion.htm" >Tabs & Accordion</a></li>
-							<li><a href="{{ STATIC_URL }}tooltips.htm" >Tooltips, Popovers</a></li>
-							<li><a href="{{ STATIC_URL }}typography.htm" >Typography</a></li>
-							<li><a href="{{ STATIC_URL }}widgets.htm" >Widget boxes</a></li>
+							<li><a href="{{ STATIC_URL }}alerts_btns.htm" >aaa</a></li>
 							<li class="dropdown">
-								<a href="#">Sub menu <b class="caret-right"></b></a>
+								<a href="#">网元信息 <b class="caret-right"></b></a>
 								<ul class="dropdown-menu">
-									<li><a href="#">Sub menu 1.1</a></li>
-									<li><a href="#">Sub menu 1.2</a></li>
-									<li><a href="#">Sub menu 1.3</a></li>
+									<li><a href="#">Soft3000</a></li>
+									<li><a href="#">SE2300</a></li>
+									<li><a href="#">SE2600</a></li>
 									<li>
 										<a href="#">Sub menu 1.4 <b class="caret-right"></b></a>
 										<ul class="dropdown-menu">
@@ -59,20 +63,14 @@
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-wrench icon-white"></i> Plugins <b class="caret"></b></a>
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-wrench icon-white"></i> IMS <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="{{ STATIC_URL }}charts.htm" >Charts</a></li>
-							<li><a href="{{ STATIC_URL }}calendar.htm" >Calendar</a></li>
-							<li><a href="{{ STATIC_URL }}datatable.htm" >Datatable</a></li>
-							<li><a href="{{ STATIC_URL }}file_manager.htm" >File Manager</a></li>
-							<li><a href="{{ STATIC_URL }}floating_header.htm" >Floating List Header</a></li>
-							<li><a href="{{ STATIC_URL }}google_maps.htm" >Google Maps</a></li>
-							<li><a href="{{ STATIC_URL }}gallery.htm" >Gallery Grid</a></li>
-							<li><a href="{{ STATIC_URL }}wizard.htm" >Wizard</a></li>
+							<li><a href="{{ STATIC_URL }}charts.htm" >SIP</a></li>
+							<li><a href="{{ STATIC_URL }}calendar.htm" >AGCP</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-file icon-white"></i> Pages <b class="caret"></b></a>
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-file icon-white"></i> 常用工具 <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="{{ STATIC_URL }}chat.htm" > Chat</a></li>
 							<li><a href="{{ STATIC_URL }}error_404.html" > Error 404</a></li>
