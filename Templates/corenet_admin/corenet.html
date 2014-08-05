@@ -1,7 +1,8 @@
 {% extends "corenet_admin/base.htm" %}
 
 {% block container_head %}
-<header>
+{% include '/corenet_admin/container_head.html' %}
+<!-- <header>
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container-fluid">
@@ -86,7 +87,7 @@
 			</div>
 		</div>
 	</div>
-</header>
+</header> -->
 {% endblock %}
 
 {% block contentwrapper %}
@@ -402,22 +403,6 @@
 					<div class="push"></div>
 				</div>
 				   
-				<div class="sidebar_info">
-					<ul class="unstyled">
-						<li>
-							<span class="act act-warning">65</span>
-							<strong>New comments</strong>
-						</li>
-						<li>
-							<span class="act act-success">10</span>
-							<strong>New articles</strong>
-						</li>
-						<li>
-							<span class="act act-danger">85</span>
-							<strong>New registrations</strong>
-						</li>
-					</ul>
-				</div> 
 			</div>
 		</div>
 	</div>
