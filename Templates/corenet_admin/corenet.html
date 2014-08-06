@@ -63,13 +63,6 @@
 						</tr>
 				    </thead>
 				    <tbody>
-					{% for item in contact %}
-						<tr>
-								
-									<td>{{ item }}</td>
-								
-							<tr>
-							{% endfor %}
 					    <tr>
 						    <td>134</td>
 						    <td>Summer Throssell</td>
@@ -123,34 +116,36 @@
 				<div id="calendar"></div>
 			</div>
 			<div class="span4" id="user-list">
-				<h3 class="heading">Users <small>last 24 hours</small></h3>
+				<h3 class="heading">相关人员信息<small>维护人员</small></h3>
 				<div class="row-fluid">
 					<div class="input-prepend">
-						<span class="add-on ad-on-icon"><i class="icon-user"></i></span><input type="text" class="user-list-search search" placeholder="Search user" />
+						<span class="add-on ad-on-icon"><i class="icon-user"></i></span><input type="text" class="user-list-search search" placeholder="查找人员" />
 					</div>
 					<ul class="nav nav-pills line_sep">
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Sort by <b class="caret"></b></a>
 							<ul class="dropdown-menu sort-by">
 								<li><a href="javascript:void(0)" class="sort" data-sort="sl_name">by name</a></li>
-								<li><a href="javascript:void(0)" class="sort" data-sort="sl_status">by status</a></li>
+								<li><a href="javascript:void(0)" class="sort" data-sort="sl_status">by duty</a></li>
 							</ul>
 						</li>
-						<li class="dropdown">
+						<!-- <li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Show <b class="caret"></b></a>
 							<ul class="dropdown-menu filter">
 								<li class="active"><a href="javascript:void(0)" id="filter-none">All</a></li>
 								<li><a href="javascript:void(0)" id="filter-online">Online</a></li>
 								<li><a href="javascript:void(0)" id="filter-offline">Offline</a></li>
 							</ul>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 				<ul class="list user_list">
 					<li>
 						<span class="label label-success pull-right sl_status">online</span>
-						<a href="#" class="sl_name">John Doe</a><br />
-						<small class="s_color sl_email">johnd@example1.com</small>
+						{% for person in contact%}
+						<a href="#" class="sl_name">{{ person.department }}</a><br />
+						<small class="s_color sl_email">{{ person.tel }}</small>
+						{% endfor %}
 					</li>	
 				</ul>
 				<div class="pagination"><ul class="paging bottomPaging"></ul></div>
