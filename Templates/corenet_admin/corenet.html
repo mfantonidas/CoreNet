@@ -142,7 +142,7 @@
 				<ul class="list user_list">
 					{% for person in contact%}
 					<li>
-						<span class="label label-success pull-right sl_status">华为</span>
+						<span class="label label-success pull-right sl_status">{{ person.duty }}</span>
 						<a href="#" class="sl_name">{{ person.department }}</a><br />
 						<small class="s_color sl_email">{{ person.tel }}</small>						
 					</li>	
