@@ -149,24 +149,32 @@
            
 			var data = [
 				{
-					label: "United States",
-					data: 560
+					label: "贝尔GPON_OLT",
+					data: 16
 				},
 				{
-					label: "Brazil",
-					data: 360
+					label: "烽火EPON_OLT",
+					data: 4
 				},
                 {
-					label: "France",
-					data: 320
+					label: "中兴EPON_OLT",
+					data: 2
 				},
 				{
-					label: "Turkey",
-					data: 280
+					label: "中兴10GEPON_OLT",
+					data: 2
 				},
 				{
-					label: "India",
-					data: 160
+					label: "华为EPON_OLT",
+					data: 57
+				},
+				{
+					label: "华为10GEPON_OLT",
+					data: 2
+				},
+				{
+					label: "华为GPON_OLT",
+					data: 18
 				}
 			];
 			
