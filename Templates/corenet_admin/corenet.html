@@ -116,7 +116,7 @@
 				<div id="calendar"></div>
 			</div>
 			<div class="span4" id="user-list">
-				<h3 class="heading">相关人员信息<small>维护人员</small></h3>
+				<h3 class="heading">相关人员信息<small>（维护人员）</small></h3>
 				<div class="row-fluid">
 					<div class="input-prepend">
 						<span class="add-on ad-on-icon"><i class="icon-user"></i></span><input type="text" class="user-list-search search" placeholder="查找人员" />
@@ -140,13 +140,13 @@
 					</ul>
 				</div>
 				<ul class="list user_list">
+					{% for person in contact%}
 					<li>
-						<span class="label label-success pull-right sl_status">online</span>
-						{% for person in contact%}
+						<span class="label label-success pull-right sl_status">华为</span>
 						<a href="#" class="sl_name">{{ person.department }}</a><br />
-						<small class="s_color sl_email">{{ person.tel }}</small>
-						{% endfor %}
+						<small class="s_color sl_email">{{ person.tel }}</small>						
 					</li>	
+					{% endfor %}
 				</ul>
 				<div class="pagination"><ul class="paging bottomPaging"></ul></div>
 			</div>
