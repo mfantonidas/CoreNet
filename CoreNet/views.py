@@ -19,6 +19,7 @@ from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from django.views.decorators.cache import never_cache
 from django.views.decorators.http import require_POST
 from tips.models import contact_info
+from olts.models import *
 
 @csrf_protect
 @login_required(login_url='/account/login')
@@ -27,7 +28,8 @@ def corenet(request):
     if request.user.is_authenticated():
         user = request.user
 	c = contact_info.objects.all()
-	return render_to_response('corenet_admin/corenet.html', {'user':user,'contact':c},context_instance=RequestContext(request))
+	olts = Olts.objects.all()
+	return render_to_response('corenet_admin/corenet.html', {'user':user,'contact':c, 'olts':olts},context_instance=RequestContext(request))
     else:
 	return login(request)
 
