@@ -51,10 +51,35 @@
         <div class="row-fluid">
             <div class="span6">
 			    <div class="heading clearfix">
-				    <h3 class="pull-left">Latest Orders</h3>
+				    <h3 class="pull-left">市本级OLT汇总</h3>
 				    <span class="pull-right label label-important">5 Orders</span>
 			    </div>
-			    <table class="table table-striped table-bordered mediaTable">
+				<!-- <div class="row-fluid">
+					<div class="input-prepend">
+						<span class="add-on ad-on-icon"><i class="icon-user"></i></span><input type="text" class="olt-list-search search" placeholder="查找OLT" />
+					</div>
+					<ul class="nav nav-pills line_sep">
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Sort by <b class="caret"></b></a>
+							<ul class="dropdown-menu sort-by">
+								<li><a href="javascript:void(0)" class="sort" data-sort="sl_name">by name</a></li>
+								<li><a href="javascript:void(0)" class="sort" data-sort="sl_ip">by ip</a></li>
+								<li><a href="javascript:void(0)" class="sort" data-sort="sl_type">by type</a></li>
+								<li><a href="javascript:void(0)" class="sort" data-sort="upbandwidth">by upbandwidth</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<ul class="list olt_list">
+					{% for olt in olts%}
+					<li>
+						<span class="label pull-right sl_status">{{ olt.duty }}</span>
+						<a href="#" class="sl_name">{{ olt.department }}</a><br />
+						<small class="s_color sl_email">{{ olt.tel }}</small>						
+					</li>	
+					{% endfor %}
+				</ul> -->
+			    <!-- <table class="table table-striped table-bordered mediaTable">
 				    <thead>
 					    <tr>
 						    <th class="optional">id</th>
@@ -88,7 +113,7 @@
 						    </td>
 					    </tr>
 					</tbody>
-			    </table>
+			    </table> -->
             </div>
             <div class="span6">
 			    <div class="heading clearfix">

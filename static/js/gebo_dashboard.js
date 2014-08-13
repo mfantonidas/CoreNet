@@ -7,6 +7,8 @@
 		//gebo_charts.fl_1();
 		gebo_charts.fl_2();
 		//* sortable/searchable list
+		//olt_flist.init();
+		
 		gebo_flist.init();
 		//* calendar
 		gebo_calendar.init();
@@ -251,6 +253,44 @@
         }
     };
 
+	olt_flist = {
+		init: function(){
+			//*typeahead
+			var list_source = [];
+			$('.olt_list li').each(function(){
+				var search_name = $(this).find('.sl_name').text();
+				//var search_email = $(this).find('.sl_email').text();
+				list_source.push(search_name);
+			});
+			$('.olt-list-search').typeahead({source: list_source, items:5});
+			
+			var pagingOptions = {};
+			var options = {
+				valueNames: [ 'sl_name', 'sl_ip', 'sl_type', 'upbandwidth' ],
+				page: 5,
+				plugins: [
+					[ 'paging', {
+						pagingClass	: "bottomPaging",
+						innerWindow	: 1,
+						left		: 1,
+						right		: 1
+					} ]
+				]
+			};
+			var userList = new List('olt-list', options);
+					
+			$('#olt-list').on('click','.sort',function(){
+					$('.sort').parent('li').removeClass('active');
+					if($(this).parent('li').hasClass('active')) {
+						$(this).parent('li').removeClass('active');
+					} else {
+						$(this).parent('li').addClass('active');
+					}
+				}
+			);
+		}
+	};
+	
 	//* filterable list
 	gebo_flist = {
 		init: function(){
