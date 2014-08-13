@@ -5,7 +5,7 @@ from django.db import models
 class contact_info(models.Model):
     department = models.CharField(max_length=20)
     tel = models.CharField(max_length=20)
-	duty = models.CharField(max_length=10)
+    duty = models.CharField(max_length=10)
     
     def __unicode__(self):
         return self.department
