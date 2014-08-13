@@ -1,5 +1,5 @@
 from django.contrib import admin
-from CoreNE.models import *
+from olts.models import *
 
 class OltsAdmin(admin.ModelAdmin):
     list_display = ('name', 'ip', 'upswitch', 'type', 'odf', 'area', 'upbandwidth')
