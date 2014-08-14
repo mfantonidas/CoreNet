@@ -7,7 +7,7 @@
 		//gebo_charts.fl_1();
 		gebo_charts.fl_2();
 		//* sortable/searchable list
-		//olt_flist.init();
+		olt_flist.init();
 		
 		gebo_flist.init();
 		//* calendar
