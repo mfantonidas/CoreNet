@@ -262,12 +262,12 @@
 				//var search_email = $(this).find('.sl_email').text();
 				list_source.push(search_name);
 			});
-			$('.olt-list-search').typeahead({source: list_source, items:10});
+			$('.olt-list-search').typeahead({source: list_source, items:5});
 			
 			var pagingOptions = {};
 			var options = {
-				valueNames: [ 'sl_name', 'sl_ip', 'sl_type', 'upbandwidth' ],
-				page: 5,
+				valueNames: [ 'sl_name', 'sl_ip', 'sl_type' ],
+				page: 10,
 				plugins: [
 					[ 'paging', {
 						pagingClass	: "bottomPaging",
@@ -278,7 +278,38 @@
 				]
 			};
 			var userList = new List('olt-list', options);
-					
+			
+			$('#filter-online').on('click',function() {
+				$('ul.filter li').removeClass('active');
+				$(this).parent('li').addClass('active');
+				userList.filter(function(item) {
+					if (item.values().sl_status == "online") {
+						return true;
+					} else {
+						return false;
+					}
+				});
+				return false;
+			});
+			$('#filter-offline').on('click',function() {
+				$('ul.filter li').removeClass('active');
+				$(this).parent('li').addClass('active');
+				userList.filter(function(item) {
+					if (item.values().sl_status == "offline") {
+						return true;
+					} else {
+						return false;
+					}
+				});
+				return false;
+			});
+			$('#filter-none').on('click',function() {
+				$('ul.filter li').removeClass('active');
+				$(this).parent('li').addClass('active');
+				userList.filter();
+				return false;
+			});
+			
 			$('#olt-list').on('click','.sort',function(){
 					$('.sort').parent('li').removeClass('active');
 					if($(this).parent('li').hasClass('active')) {
