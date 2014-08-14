@@ -29,7 +29,8 @@ def corenet(request):
         user = request.user
 	c = contact_info.objects.all()
 	olts = Olts.objects.all()
-	return render_to_response('corenet_admin/corenet.html', {'user':user,'contact':c, 'olts':olts},context_instance=RequestContext(request))
+	oltnum = olts.count()
+	return render_to_response('corenet_admin/corenet.html', {'user':user,'contact':c, 'olts':olts, 'num':oltnum},context_instance=RequestContext(request))
     else:
 	return login(request)
 
