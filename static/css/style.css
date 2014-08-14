@@ -434,6 +434,11 @@
 		.user_list li {padding:0 8px 8px;margin-bottom:8px;border-bottom: 1px dashed #dcdcdc;line-height:normal }
 		.user_list small {font-size: 11px;color:#9b9b9b}
 	
+	/* sortable/searchable olt_list */
+		.olt_list {list-style: none;margin:0}
+		.olt_list li {padding:0 8px 8px;margin-bottom:8px;border-bottom: 1px dashed #dcdcdc;line-height:normal }
+		.olt_list small {font-size: 11px;color:#9b9b9b}
+	
 	/* file manager */
         #kcfinder_iframe {height:500px;margin-bottom:30px;border:1px solid #adaba9}
 
