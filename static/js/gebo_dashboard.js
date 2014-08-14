@@ -262,12 +262,12 @@
 				//var search_email = $(this).find('.sl_email').text();
 				list_source.push(search_name);
 			});
-			$('.olt-list-search').typeahead({source: list_source, items:5});
+			$('.olt-list-search').typeahead({source: list_source, items:20});
 			
 			var pagingOptions = {};
 			var options = {
 				valueNames: [ 'sl_name', 'sl_ip', 'sl_type' ],
-				page: 20,
+				page: 5,
 				plugins: [
 					[ 'paging', {
 						pagingClass	: "bottomPaging",
