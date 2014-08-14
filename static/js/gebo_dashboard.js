@@ -262,7 +262,7 @@
 				//var search_email = $(this).find('.sl_email').text();
 				list_source.push(search_name);
 			});
-			$('.olt-list-search').typeahead({source: list_source, items:5});
+			$('.olt-list-search').typeahead({source: list_source, items:10});
 			
 			var pagingOptions = {};
 			var options = {
