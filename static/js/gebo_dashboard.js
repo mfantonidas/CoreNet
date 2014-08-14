@@ -258,7 +258,7 @@
 			//*typeahead
 			var list_source = [];
 			$('.olt_list li').each(function(){
-				var search_name = $(this).find('.sl_name').text();
+				var search_name = $(this).find('.sl_ip').text();
 				//var search_email = $(this).find('.sl_email').text();
 				list_source.push(search_name);
 			});
