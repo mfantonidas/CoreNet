@@ -267,7 +267,7 @@
 			var pagingOptions = {};
 			var options = {
 				valueNames: [ 'sl_name', 'sl_ip', 'sl_type' ],
-				page: 10,
+				page: 20,
 				plugins: [
 					[ 'paging', {
 						pagingClass	: "bottomPaging",
