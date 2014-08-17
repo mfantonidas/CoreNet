@@ -2,20 +2,13 @@
 
 	$(document).ready(function() {
 		//* basic
-		gebo_datatbles.dt_a();
-		// horizontal scroll
-		gebo_datatbles.dt_b();
-		//* large table
-		gebo_datatbles.dt_c();
-		//* hideable columns
-		gebo_datatbles.dt_d();
-		//* server side proccessing with hiden row
+		gebo_datatbles.dt_corenet();
 		gebo_datatbles.dt_e();
 	});
 	
 	//* calendar
 	gebo_datatbles = {
-		dt_a: function() {
+		dt_corenet: function() {
 			$('#dt_a').dataTable({
                 "sDom": "<'row'<'span6'<'dt_actions'>l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
                 "sPaginationType": "bootstrap_alt",
@@ -23,67 +16,6 @@
                     "sLengthMenu": "_MENU_ records per page"
                 }
             });
-		},
-        dt_b: function() {
-			$('#dt_b').dataTable({
-				"sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
-                "sScrollX": "100%",
-                "sScrollXInner": '110%',
-                "sPaginationType": "bootstrap",
-                "bScrollCollapse": true 
-            });
-		},
-		dt_c: function() {
-                
-            var aaData = [];
-            for ( var i=1, len=1000 ; i<=len ; i++ ) {
-                aaData.push( [ i, i, i, i, i ] );
-            };
-            
-            $('#dt_c').dataTable({
-				"sDom": "<'row'<'span6'><'span6'f>r>t<'row'<'span6'i><'span6'>S>",
-                "sScrollY": "200px",
-                "aaData": aaData,
-                "bDeferRender": true
-			});
-            
-            $('#fill_table').click(function(){
-                var aaData = [];
-                for ( var i=1, len=50000; i <= len; i++){
-                    aaData.push( [ i, i, i, i, i ] );
-                };
-               
-                $('#dt_c').dataTable({
-                    "sDom": "<'row'<'span6'><'span6'f>r>t<'row'<'span6'i><'span6'>S>",
-                    "sScrollY": "200px",
-                    "aaData": aaData,
-                    "bDestroy": true,
-                    "bDeferRender": true
-                });
-                $(this).remove();
-                $('#entries').html('50 000');
-                $('.dataTables_scrollHeadInner').css({'height':'34px','top':'0'});
-            });
-            
-		},
-		dt_d: function() {
-		
-			function fnShowHide( iCol ) {
-				/* Get the DataTables object again - this is not a recreation, just a get of the object */
-				var oTable = $('#dt_d').dataTable();
-				 
-				var bVis = oTable.fnSettings().aoColumns[iCol].bVisible;
-				oTable.fnSetColumnVis( iCol, bVis ? false : true );
-			};
-			
-			var oTable = $('#dt_d').dataTable({
-				"sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
-				"sPaginationType": "bootstrap"
-			});
-			
-			$('#dt_d_nav').on('click','li input',function(){
-				fnShowHide( $(this).val() );
-			});
 		},
 		dt_e: function(){
 			if($('#dt_e').length) {
