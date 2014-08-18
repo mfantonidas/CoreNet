@@ -15,7 +15,7 @@
                 "sPaginationType": "bootstrap",
                 "bScrollCollapse": true 
 				//"bJQueryUI":true
-				"iDisplayLength":6
+				//"iDisplayLength":6
             });
 		},
 	};
