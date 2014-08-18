@@ -9,6 +9,7 @@
 	//* calendar
 	gebo_datatbles = {
 		dt_corenet: function() {
+			alert('aaa');
 			$('#dt_corenet').dataTable({
 			    "bPaginate": true, //翻页功能
 				"bLengthChange": true, //改变每页显示数据数量
