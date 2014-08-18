@@ -1,5 +1,5 @@
 /* [ ---- Gebo Admin Panel - datatables ---- ] */
-
+alert("asdf");
 	$(document).ready(function() {
 		//* basic
 		gebo_datatbles.dt_corenet();
