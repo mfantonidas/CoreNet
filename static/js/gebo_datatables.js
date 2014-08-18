@@ -10,10 +10,22 @@
 	gebo_datatbles = {
 		dt_corenet: function() {
 			$('#dt_a').dataTable({
+			    "bPaginate": true, //翻页功能
+				"bLengthChange": true, //改变每页显示数据数量
+				"bFilter": true, //过滤功能
+				"bSort": false, //排序功能
+				"bInfo": true,//页脚信息
+				"bAutoWidth": true//自动宽度
                 "sDom": "<'row'<'span6'<'dt_actions'>l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
                 "sPaginationType": "bootstrap_alt",
                 "oLanguage": {
                     "sLengthMenu": "_MENU_ records per page"
+					"oPaginate": {
+                        "sFirst": "首页",
+                        "sPrevious": "上一页",
+                        "sNext": "下一页",
+                        "sLast": "末页"
+                    }
                 }
             });
 		},
