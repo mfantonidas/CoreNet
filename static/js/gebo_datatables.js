@@ -14,6 +14,8 @@
                 "sScrollXInner": '110%',
                 "sPaginationType": "bootstrap",
                 "bScrollCollapse": true 
+				"bJQueryUI":true
+				"iDisplayLength":6
             });
 		},
 	};
