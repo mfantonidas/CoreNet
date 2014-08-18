@@ -87,33 +87,22 @@
 					<thead>
 						<tr>
 							<th>网元</th>
+							<th>网元类型</th>
 							<th>管理地址</th>
 							<th>用户名</th>
 							<th>密码</th>
 						</tr>
 					</thead>
 					<tbody>
-					{{ for item in corenes }}
+					{% for item in corenes %}
 						<tr>
 							<td>{{ items.name }}</td>
-							<td>Summer Throssell</td>
-							<td>summert@example.com</td>
+							<td>{{ items.netype }}</td>
+							<td>{{ items.logaddr }}</td>
+							<td>{{ items.logname }}</td>
+							<td>{{ items.logpass }}</td>
 						</tr>
-						<tr>
-							<td>135</td>
-							<td>Anthony Pound</td>
-							<td>anthonyp@example.com</td>
-						</tr>
-						<tr>
-							<td>136</td>
-							<td>Erin Church</td>
-							<td>erinc@example.com</td>
-						</tr>
-						<tr>
-							<td>137</td>
-							<td>Declan Pamphlett</td>
-							<td>declanp@example.com</td>
-						</tr>
+					{% endfor %}
 					</tbody>
 				</table>	
 		    </div>

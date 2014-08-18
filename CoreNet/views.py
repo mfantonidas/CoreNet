@@ -20,6 +20,7 @@ from django.views.decorators.cache import never_cache
 from django.views.decorators.http import require_POST
 from tips.models import contact_info
 from olts.models import *
+from CoreNE.models import *
 
 @csrf_protect
 @login_required(login_url='/account/login')
@@ -30,7 +31,8 @@ def corenet(request):
 	c = contact_info.objects.all()
 	olts = Olts.objects.all()
 	oltnum = olts.count()
-	return render_to_response('corenet_admin/corenet.html', {'user':user,'contact':c, 'olts':olts, 'num':oltnum},context_instance=RequestContext(request))
+	corenes = corenet_ne.objects.all()
+	return render_to_response('corenet_admin/corenet.html', {'user':user,'contact':c, 'olts':olts, 'num':oltnum, 'corenes':corenes},context_instance=RequestContext(request))
     else:
 	return login(request)
 
