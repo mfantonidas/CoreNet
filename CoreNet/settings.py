@@ -142,6 +142,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     #'testapp',
+    'crispy_forms',
 	'xadmin',
     'CoreNet',
     'olts',
