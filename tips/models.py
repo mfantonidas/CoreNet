@@ -9,3 +9,7 @@ class contact_info(models.Model):
     
     def __unicode__(self):
         return self.department
+
+class duty(models.Model):
+    date = models.CharField(max_length=10)
+	xlsFile = models.FileField('excel', upload_to='documents/%Y/%m/%d')
