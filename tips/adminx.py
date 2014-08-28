@@ -16,7 +16,7 @@ class contactAdmin(object):
 class dutyAdmin(object):
     list_display = ('date', 'file')
     search_fields = ('date',)
-	ordering = ('id',)
+    ordering = ('id',)
 
 xadmin.site.register(views.CommAdminView, GlobalSetting)
 xadmin.site.register(contact_info, contactAdmin)
