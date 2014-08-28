@@ -12,4 +12,4 @@ class contact_info(models.Model):
 
 class duty(models.Model):
     date = models.CharField(max_length=10)
-	xlsFile = models.FileField( upload_to='documents')
+	xlsFile = models.FileField()
