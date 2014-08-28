@@ -14,7 +14,7 @@ class contactAdmin(object):
     ordering = ('id',)
 	
 class dutyAdmin(object):
-    list_display = ('date', 'file')
+    list_display = ('date', 'xlsFile')
     search_fields = ('date',)
     ordering = ('id',)
 
