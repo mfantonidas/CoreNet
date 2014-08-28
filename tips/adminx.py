@@ -6,6 +6,14 @@ from tips.models import contact_info
 class GlobalSetting(object):
     site_title = 'CoreNet'
     site_footer = 'CoreNet'
+    def get_site_menu(self):
+        return (
+            {'title': '投票管理', 'perm': self.get_model_perm(Poll, 'change'), 'menus':(
+                {'title': '投票',  'url': self.get_model_url(Poll, 'changelist')},
+                {'title':'选票','url': self.get_model_url(Choice, 'changelist')}
+            )},
+        )		
+		
 #class contactAdmin(admin.ModelAdmin):
 class contactAdmin(object):
     list_display = ('department', 'tel', 'duty')
