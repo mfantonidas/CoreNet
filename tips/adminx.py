@@ -5,7 +5,7 @@ from tips.models import contact_info
 
 class GlobalSetting(object):
     site_title = 'CoreNet'
-	site_footer = 'CoreNet'
+    site_footer = 'CoreNet'
 #class contactAdmin(admin.ModelAdmin):
 class contactAdmin(object):
     list_display = ('department', 'tel', 'duty')
