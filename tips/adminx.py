@@ -8,8 +8,8 @@ class GlobalSetting(object):
     site_footer = 'CoreNet'
     def get_site_menu(self):
         return (
-            {'title': 'Members', 'perm': self.get_model_perm(Poll, 'change'), 'menus':(
-                {'title': 'duty',  'url': self.get_model_url(Poll, 'changelist')}
+            {'title': 'Members', 'perm': self.get_model_perm(, ''), 'menus':(
+                {'title': 'duty',  'url': self.get_model_url(, '')}
             )},
         )		
 		
