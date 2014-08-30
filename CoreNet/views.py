@@ -68,3 +68,21 @@ def corenet_logout(request):
 #class LoginForm(forms.Form):
 #    username = forms.CharField(label=_(u"Login Account"), widget=forms.TextInput(attrs={'placehoder':'Username', 'id':'username', 'name':'username', 'value':'Your Account'}))
 #    password = forms.CharField(label=_(u"Password"), widget=forms.PasswordInput(attrs={'placeholder':'Password','id':'password', 'name':'password', 'value':'password'}))
+
+'''文件上传'''
+def handle_uploaded_file(f):
+    file_name = ""
+
+    try:
+        path = "media/image" + time.strftime('/%Y/%m/%d/%H/%M/%S/')
+        if not os.path.exists(path):
+            os.makedirs(path)
+            file_name = path + f.name
+            destination = open(file_name, 'wb+')
+            for chunk in f.chunks():
+                destination.write(chunk)
+            destination.close()
+    except Exception, e:
+        print e
+
+    return file_name
