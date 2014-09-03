@@ -132,31 +132,7 @@
 				fixed: true
 			});
 			</script>-->
-			<script src="{{ STATIC_URL }}lib/datatables/jquery.dataTables.min.js" ></script>
-			<script src="{{ STATIC_URL }}lib/datatables/extras/Scroller/media/js/Scroller.min.js" ></script>
-			<!-- datatable functions -->
-			<script src="{{ STATIC_URL }}js/gebo_datatables.js" ></script>
-	
-			<!-- multi-column layout -->
-			<script src="{{ STATIC_URL }}js/jquery.imagesloaded.min.js" ></script>
-			<script src="{{ STATIC_URL }}js/jquery.wookmark.js" ></script>
-			<!-- responsive table -->
-			<script src="{{ STATIC_URL }}js/jquery.mediaTable.min.js" ></script>
-			<!-- small charts -->
-			<script src="{{ STATIC_URL }}js/jquery.peity.min.js" ></script>
-			<!-- charts -->
-			<script src="{{ STATIC_URL }}lib/flot/jquery.flot.min.js" ></script>
-			<script src="{{ STATIC_URL }}lib/flot/jquery.flot.resize.min.js" ></script>
-			<script src="{{ STATIC_URL }}lib/flot/jquery.flot.pie.min.js" ></script>
-			<!-- calendar -->
-			<script src="{{ STATIC_URL }}lib/fullcalendar/fullcalendar.min.js" ></script>
-			<!-- sortable/filterable list -->
-			<script src="{{ STATIC_URL }}lib/list_js/list.min.js" ></script>
-			<script src="{{ STATIC_URL }}lib/list_js/plugins/paging/list.paging.min.js" ></script>
-			<!-- dashboard functions -->
-			<script src="{{ STATIC_URL }}js/gebo_dashboard.js" ></script>
-			<!-- datatable -->
-			
+			{% block extrajs %}{% endblock %}
 	
 			<script>
 				$(document).ready(function() {
