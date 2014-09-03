@@ -25,3 +25,7 @@ urlpatterns = patterns('',
     url(r'accounts/profile/$', "CoreNet.views.corenet", name='main_page'),
     url(r'corenet/$', "CoreNet.views.corenet", name='main_page'), 
 )
+
+urlpatterns += patterns('olts.views',
+    (r'^fttx/$', 'fttxorder'),
+)
