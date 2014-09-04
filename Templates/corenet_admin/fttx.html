@@ -6,16 +6,20 @@
 
 {% block contentwrapper %}
 <div id="contentwrapper">
-<body>
+	<div class="main_content">
+		<div class="row-fluid">
+		<body>
 
-    <input type="file" id="file" class="custom-file-input">
+			<input type="file" id="file" class="custom-file-input">
 
-    <script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
-    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.js"></script>
-    <script src="{{ STATIC_URL }}js/bootstrap.file-input.js"></script>
+			<script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
+			<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.js"></script>
+			<script src="{{ STATIC_URL }}js/bootstrap.file-input.js"></script>
 	
-  </body>
-  </div>
+		</body>
+		</div>
+	</div>
+</div>
 {% endblock %}
 
 {% block sidebar %}
