@@ -56,7 +56,11 @@
 	
         <!-- favicon -->
             <link rel="shortcut icon" href="favicon.ico" />
-		
+			<link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+			<link href="{{ STATIC_URL }}css/bootstrap.file-input.css" rel="stylesheet">
+
+			<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+			
         <!--[if lte IE 8]>
             <link rel="stylesheet" href="{{ STATIC_URL }}css/ie.css"  />
         <![endif]-->
@@ -65,6 +69,7 @@
 			<script src="{{ STATIC_URL }}js/ie/html5.js" ></script>
 			<script src="{{ STATIC_URL }}js/ie/respond.min.js" ></script>
 			<script src="{{ STATIC_URL }}lib/flot/excanvas.min.js" ></script>
+			<script src="http://twitter.github.com/bootstrap/assets/js/html5shiv.js"></script>
         <![endif]-->
 		<script>
 			//* hide all elements & show preloader
