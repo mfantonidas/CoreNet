@@ -22,6 +22,10 @@ from tips.models import contact_info
 from olts.models import *
 from CoreNE.models import *
 
+class UserForm(forms.Form):
+    date = forms.CharField()
+    xlsfile = forms.FileField()
+
 @csrf_protect
 @login_required(login_url='/account/login')
 
