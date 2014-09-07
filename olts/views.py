@@ -22,10 +22,27 @@ from tips.models import contact_info
 from olts.models import *
 from CoreNE.models import *
 
-class UserForm(forms.Form):
+class DateForm(forms.Form):
     date = forms.CharField()
     xlsfile = forms.FileField()
 
+def register(request):
+    if request.method == "POST":
+        uf = DateForm(request.POST,request.FILES)
+        if uf.is_valid():
+            #获取表单信息
+            date = uf.cleaned_data['date']
+            xlsfile = uf.cleaned_data['xlsfile']
+            #写入数据库
+            duty = duty()
+            duty.date = date
+            duty.xlsfile = xlsfile
+            duty.save()
+            return HttpResponse('upload ok!')
+    else:
+        uf = DateForm()
+    return render_to_response('corenet_admin/fttx.html',{'uf':uf})
+	
 @csrf_protect
 @login_required(login_url='/account/login')
 
