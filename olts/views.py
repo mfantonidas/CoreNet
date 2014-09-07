@@ -24,17 +24,17 @@ from CoreNE.models import *
 
 class DateForm(forms.Form):
     date = forms.CharField()
-    xlsfile = forms.FileField()
+    xlsFile = forms.FileField()
 
 def register(request):
     if request.method == "POST":
         uf = DateForm(request.POST,request.FILES)
         if uf.is_valid():
             date = uf.cleaned_data['date']
-            xlsfile = uf.cleaned_data['xlsfile']
+            xlsFile = uf.cleaned_data['xlsFile']
             d = duty()
             d.date = date
-            d.xlsfile = xlsfile
+            d.xlsFile = xlsFile
             d.save()
             return HttpResponse('upload ok!')
     else:
