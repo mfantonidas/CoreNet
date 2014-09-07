@@ -48,7 +48,7 @@ def fttxorder(request):
     if request.user.is_authenticated():
         user = request.user
         uf = DateForm()
-	return render_to_response('corenet_admin/fttx.html', {'user':user},context_instance=RequestContext(request))
+	return render_to_response('corenet_admin/fttx.html', {'user':user, 'uf':uf},context_instance=RequestContext(request))
     else:
 	return login(request)
  
