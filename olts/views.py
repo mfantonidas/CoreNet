@@ -27,8 +27,6 @@ class DateForm(forms.Form):
     xlsfile = forms.FileField()
 
 def register(request):
-    if request.user.is_authenticated():
-        user = request.user
     if request.method == "POST":
         uf = DateForm(request.POST,request.FILES)
         if uf.is_valid():
@@ -41,7 +39,7 @@ def register(request):
             return HttpResponse('upload ok!')
     else:
         uf = DateForm()
-    return render_to_response('corenet_admin/fttx.html',{'user':user, 'uf':uf},context_instance=RequestContext(request))
+    return render_to_response('corenet_admin/fttx.html',{'uf':uf},context_instance=RequestContext(request))
 	
 @csrf_protect
 @login_required(login_url='/account/login')
