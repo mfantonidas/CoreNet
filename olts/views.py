@@ -30,10 +30,8 @@ def register(request):
     if request.method == "POST":
         uf = DateForm(request.POST,request.FILES)
         if uf.is_valid():
-            #获取表单信息
             date = uf.cleaned_data['date']
             xlsfile = uf.cleaned_data['xlsfile']
-            #写入数据库
             duty = duty()
             duty.date = date
             duty.xlsfile = xlsfile
