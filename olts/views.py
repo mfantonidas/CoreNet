@@ -32,10 +32,10 @@ def register(request):
         if uf.is_valid():
             date = uf.cleaned_data['date']
             xlsfile = uf.cleaned_data['xlsfile']
-            duty = duty()
-            duty.date = date
-            duty.xlsfile = xlsfile
-            duty.save()
+            d = duty()
+            d.date = date
+            d.xlsfile = xlsfile
+            d.save()
             return HttpResponse('upload ok!')
     else:
         uf = DateForm()
