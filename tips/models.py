@@ -12,7 +12,7 @@ class contact_info(models.Model):
 
 class duty(models.Model):
     date = models.CharField(max_length=10)
-    xlsFile = models.FileField(upload_to='./upload')
+    xlsFile = models.FileField(upload_to='/upload')
     
     def __unicode__(self):
         return self.date
