@@ -39,7 +39,7 @@ def register(request):
             return HttpResponse('upload ok!')
     else:
         uf = DateForm()
-    return render_to_response('corenet_admin/fttx.html',{'uf':uf})
+    return render_to_response('corenet_admin/fttx.html',{'user':user, 'uf':uf},context_instance=RequestContext(request))
 	
 @csrf_protect
 @login_required(login_url='/account/login')
