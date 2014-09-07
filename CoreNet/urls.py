@@ -27,5 +27,5 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns('olts.views',
-    (r'fttx/$', 'fttxorder'),
+    (r'fttx/$', 'register'),
 )
