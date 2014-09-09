@@ -42,7 +42,7 @@ urlpatterns = patterns('',
     #url(r'^corenet_logout$', "CoreNet.views.logout", name='accounts_logout'),
     url(r'accounts/profile/$', "CoreNet.views.corenet", name='main_page'),
     url(r'corenet/$', "CoreNet.views.corenet", name='main_page'), 
-    url(r'^', include(routers.urls)),
+    url(r'^', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 )
 
