@@ -4,6 +4,7 @@ from django.shortcuts import render_to_response
 from rest_framework import routers
 from rest_framework import viewsets
 from testapp.serializers import UserSerializer, GroupSerializer
+from testapp import views
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
