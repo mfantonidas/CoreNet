@@ -4,7 +4,7 @@ from django.shortcuts import render_to_response
 from rest_framework import routers
 from rest_framework import viewsets
 from testapp.serializers import UserSerializer, GroupSerializer
-
+from django.contrib.auth.models import User,Group
 
 def hello1(request):
     return HttpResponse('oh shit~~')   
