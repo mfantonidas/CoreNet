@@ -3,10 +3,16 @@ from django.contrib import admin
 from django.conf.urls.defaults import *
 from django.contrib.auth.views import login,logout
 from CoreNet.views import *
+from rest_framework import routers
+from testapp import views
 import xadmin
 # Uncomment the next two lines to enable the admin:
 #from django.contrib import admin
 xadmin.autodiscover()
+
+router = routers.DefaultRouter()
+router.register(r'users', views.UserViewSet)
+router.register(r'groups', views.GroupViewSet)
 
 urlpatterns = patterns('',
     # Examples:
@@ -24,6 +30,7 @@ urlpatterns = patterns('',
     #url(r'^corenet_logout$', "CoreNet.views.logout", name='accounts_logout'),
     url(r'accounts/profile/$', "CoreNet.views.corenet", name='main_page'),
     url(r'corenet/$', "CoreNet.views.corenet", name='main_page'), 
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 )
 
 urlpatterns += patterns('olts.views',
